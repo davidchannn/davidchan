@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #fff1dd,
+    #fbffcf,
+    #c6feff,
+    #ffd3fe,
+    #cdfcff
+  ); /* Smooth gradient with multiple stops */
+  background-size: 300% 300%; /* Larger background size for smoother transition */
+  animation: gradientShift 10s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+}
+
+header {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  animation: floatDown 2s ease-out forwards;
+  opacity: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* Define the animated gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-100%); /* Start above the screen */
+    opacity: 0; /* Invisible at the start */
+  }
+  50% {
+    opacity: 1; /* Start becoming visible halfway through */
+  }
+  100% {
+    transform: translateY(0); /* End in the center */
+    opacity: 1; /* Fully visible */
+  }
+}
