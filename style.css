@@ -11,27 +11,48 @@ html {
     #cdfcff
   ); /* Smooth gradient with multiple stops */
   background-size: 300% 300%; /* Larger background size for smoother transition */
-  animation: gradientShift 10s ease-in-out infinite;
+  animation: gradientShift 15s ease-in-out infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "League Spartan", sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 header {
-  color: rgb(0, 0, 0);
-  text-align: center;
   animation: floatDown 2s ease-out forwards;
-  opacity: 1;
+  opacity: 0;
+  display: flex;
+  flex-direction: row; /* Align text and image side by side */
+  align-items: center; /* Vertically center the image with the text */
 }
 
 h1 {
   font-size: 3rem;
   font-weight: bold;
+  margin: 0;
 }
 
 p {
   font-size: 1.5rem;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.text-container {
+  margin-right: 20px; /* Adds space between the text and the image */
+  background-color: transparent; /* Remove the background box from text */
+  padding: 0; /* Remove any padding around the text */
+  box-shadow: none; /* Remove the shadow */
+}
+
+.fade-in-image {
+  width: auto;
+  height: 350px;
+  border-radius: 10%; /* Circular image */
+  opacity: 0;
+  animation: fadeInImage 1s ease-in forwards;
+  animation-delay: 2s;
+  margin-left: 30px; /* Adds space between the image and text */
 }
 
 /* Define the animated gradient */
@@ -47,16 +68,27 @@ p {
   }
 }
 
+/* Float down animation for text */
 @keyframes floatDown {
   0% {
-    transform: translateY(-100%); /* Start above the screen */
-    opacity: 0; /* Invisible at the start */
+    transform: translateY(-100%);
+    opacity: 0;
   }
   50% {
-    opacity: 1; /* Start becoming visible halfway through */
+    opacity: 1;
   }
   100% {
-    transform: translateY(0); /* End in the center */
-    opacity: 1; /* Fully visible */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for the image */
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
