@@ -8,13 +8,15 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" type="image/x-icon" href="images/Lemon-logo.png" />
     <meta charset="UTF-8" />
+    <script src="./script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Chan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <section class="intro-section">
       <div class="text-container">
         <h1>Hello,</h1>
         <h1>I'm David Chan</h1>
@@ -26,6 +28,71 @@
         alt="Profile Image"
         class="fade-in-image"
       />
-    </header>
+    </section>
+
+    <section class="content-section">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <a
+          href="https://github.com/ariabrams65/DicomViewer3D"
+          class="project-card"
+        >
+          <img
+            src="/images/dicom-viewer.png"
+            alt="dicom-viewer"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3>DicomViewer 3D</h3>
+            <p>
+              Worked on a browser-based application capable of generating 3D
+              visualizations for medical scans
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a
+          href="https://play.unity.com/en/games/4bd4d89a-b3cb-4595-b766-edebe8229499/fishy-game"
+          class="project-card"
+        >
+          <img
+            src="/images/fishy-game.png"
+            alt="Project 2"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3>Fishy Game</h3>
+            <p>
+              Created a 2D Unity game to familiarize myself with Unity and its
+              tools/libraries (Game is not supported on mobile devices)
+            </p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a
+          href="https://davidchannn.github.io/LemonPhysics-Archive/index.html"
+          class="project-card"
+        >
+          <img
+            src="/images/lemon-physics.png"
+            alt="Project 1"
+            class="project-image"
+          />
+          <div class="project-info">
+            <h3>Lemon Physics</h3>
+            <p>
+              Developed a conceptual physics calculator that solves for a
+              missing variable and provides educational videos
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="content-section">
+      <h2>My Resume</h2>
+    </section>
   </body>
 </html>

@@ -1,7 +1,20 @@
-html {
-  height: 100%;
+/* Reset some defaults for better cross-browser compatibility */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure everything scales well */
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin: 0;
   background: linear-gradient(
     135deg,
     #fff1dd,
@@ -9,50 +22,114 @@ html {
     #c6feff,
     #ffd3fe,
     #cdfcff
-  ); /* Smooth gradient with multiple stops */
-  background-size: 300% 300%; /* Larger background size for smoother transition */
+  );
+  background-size: 300% 300%;
   animation: gradientShift 15s ease-in-out infinite;
+}
+
+a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from the parent element */
+}
+
+.intro-section {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Montserrat, sans-serif;
-}
-
-header {
-  animation: floatDown 2s ease-out forwards;
-  opacity: 0;
-  display: flex;
-  flex-direction: row; /* Align text and image side by side */
-  align-items: center; /* Vertically center the image with the text */
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-p {
-  font-size: 1.5rem;
-  margin: 0;
-  margin-top: 1rem;
+  flex-direction: row; /* Arrange elements in a row */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Horizontally center the items */
+  padding: 20px;
+  text-align: left; /* Align the text to the left for each item */
 }
 
 .text-container {
-  margin-right: 20px; /* Adds space between the text and the image */
-  background-color: transparent; /* Remove the background box from text */
-  padding: 0; /* Remove any padding around the text */
-  box-shadow: none; /* Remove the shadow */
+  margin-right: 30px; /* Adds space between the text and image */
+}
+
+.intro-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .fade-in-image {
   width: auto;
-  height: 350px;
-  border-radius: 10%; /* Circular image */
+  max-width: 350px; /* Ensure the image does not exceed this size */
+  height: auto;
+  border-radius: 15%; /* Circular image */
   opacity: 0;
   animation: fadeInImage 1s ease-in forwards;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
   margin-left: 30px; /* Adds space between the image and text */
+}
+
+/* Projects Section Styling */
+.content-section {
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.projects-section {
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex; /* Switch to flexbox for easier centering */
+  justify-content: center; /* Horizontally center the grid */
+  flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
+  gap: 30px; /* Space between the cards */
+  margin-top: 50px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px; /* Adjust the max width for each card */
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: left;
+}
+
+.project-card:hover {
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Typing */
+@media (max-width: 768px) {
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section p {
+    font-size: 1rem;
+  }
 }
 
 /* Define the animated gradient */
@@ -65,21 +142,6 @@ p {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-/* Float down animation for text */
-@keyframes floatDown {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
