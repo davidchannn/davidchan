@@ -7,16 +7,28 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
     <link rel="icon" type="image/x-icon" href="images/Lemon-logo.png" />
     <meta charset="UTF-8" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Chan</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="intro-section">
+    <!-- Sticky Navbar -->
+    <header class="navbar">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#social">Socials</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="home" class="intro-section">
       <div class="text-container">
         <h1>Hello,</h1>
         <h1>I'm David Chan</h1>
@@ -26,14 +38,14 @@
       <img
         src="./images/dc_professional_pfp.JPEG"
         alt="Profile Image"
-        class="fade-in-image"
+        class="fade-in-image circular-image"
       />
     </section>
 
-    <section class="content-section">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
       <h2>My Projects</h2>
       <div class="projects-grid">
-        <!-- Project 1 -->
         <a
           href="https://github.com/ariabrams65/DicomViewer3D"
           class="project-card"
@@ -47,52 +59,86 @@
             <h3>DicomViewer 3D</h3>
             <p>
               Worked on a browser-based application capable of generating 3D
-              visualizations for medical scans
+              visualizations for medical scans.
             </p>
           </div>
         </a>
 
-        <!-- Project 2 -->
         <a
           href="https://play.unity.com/en/games/4bd4d89a-b3cb-4595-b766-edebe8229499/fishy-game"
           class="project-card"
         >
           <img
             src="./images/fishy-game.png"
-            alt="Project 2"
+            alt="Fishy Game"
             class="project-image"
           />
           <div class="project-info">
             <h3>Fishy Game</h3>
             <p>
               Created a 2D Unity game to familiarize myself with Unity and its
-              tools/libraries (Game is not supported on mobile devices)
+              tools/libraries (Not supported on mobile).
             </p>
           </div>
         </a>
 
-        <!-- Project 3 -->
         <a
           href="https://davidchannn.github.io/LemonPhysics-Archive/index.html"
           class="project-card"
         >
           <img
             src="./images/lemon-physics.png"
-            alt="Project 1"
+            alt="Lemon Physics"
             class="project-image"
           />
           <div class="project-info">
             <h3>Lemon Physics</h3>
             <p>
               Developed a conceptual physics calculator that solves for a
-              missing variable and provides educational videos
+              missing variable and provides educational videos.
             </p>
           </div>
         </a>
       </div>
     </section>
-    <section class="content-section">
-      <h2>My Resume</h2>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+      <ul class="skills-list">
+        <li>
+          <strong>Languages:</strong> JavaScript, C/C++, Java, HTML/CSS, SQL
+        </li>
+        <li><strong>Frameworks:</strong> NodeJS, ReactJS, ExpressJS, NextJS</li>
+        <li><strong>Tools:</strong> Git, Unity, PostgreSQL</li>
+        <li>
+          <strong>Soft Skills:</strong> Team Leadership, Communication, Problem
+          Solving
+        </li>
+        <li>
+          <strong>Education:</strong> University of California, Irvine — B.S. in
+          Computer Science
+        </li>
+      </ul>
+    </section>
+
+    <!-- social Section -->
+    <section id="social" class="social-section">
+      <h2>Socials</h2>
+      <div class="social-icons">
+        <a href="https://github.com/davidchannn" target="_blank">
+          <img src="./images/github-logo.png" alt="GitHub" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-chan-47524926a/"
+          target="_blank"
+        >
+          <img src="./images/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:davidochan@gmail.com">
+          <img src="./images/gmail-logo.png" alt="Email" />
+        </a>
+      </div>
     </section>
   </body>
 </html>
