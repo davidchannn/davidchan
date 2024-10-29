@@ -271,3 +271,67 @@ a {
     --img-height: 80px;
   }
 }
+
+/* Music Toggle Button */
+#music-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, 
+  #ff0000,
+  #ff6600,
+  #d9ff00,
+  #0dff00, 
+  #00eeff,
+  #0d00ff,
+  #5d00ff,
+  #bf00ff,
+  #ff00d9, 
+  #ff0080,
+  #ff0000,
+  #ff6600,
+  #d9ff00,
+  #0dff00, 
+  #00eeff,
+  #0d00ff,
+  #5d00ff,
+  #bf00ff,
+  #ff00d9, 
+  #ff0080);
+  background-size: 400% 400%;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: gradientAnimation 15s ease infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#music-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#music-toggle img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
