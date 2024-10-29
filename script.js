@@ -3,13 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicIcon = document.getElementById('music-icon');
     const audio = document.getElementById('background-music');
 
+    let isPlaying = true;
+
     audio.play().catch(function () {
         // Autoplay was prevented
         // Update icon to muted state
         musicIcon.src = 'images/volume-mute-icon.png';
+        isPlaying = false;
     });
-
-    let isPlaying = true;
 
     musicToggle.addEventListener('click', function () {
         if (isPlaying) {
