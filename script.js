@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let isPlaying = true;
 
     audio.play().catch(function () {
-        // Autoplay was prevented
-        // Update icon to muted state
         musicIcon.src = 'images/volume-mute-icon.png';
         isPlaying = false;
     });
